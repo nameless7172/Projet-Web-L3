@@ -1,9 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Nantes, city in France {% endblock %}
+
+{% block body %}
 <h1>{{ title }}</h1>
 
 <div>
     <p>
-        {{ title2 }}
-        Hello sir
+        Nantes is the capital city of the Pays de la Loire region and the département of Loire-Atlantique. It is located on the estuary of the Loire, the Erdre and the Sèvre Rivers, about 50 km from the Atlantic Ocean.
+        In 2004, Time magazine described Nantes as the ‘most liveable city in Europe’. The city also holds the title of ‘Green European Capital’ for 2013.
+
+        ...Copyright © French Moments Ltd unless otherwise stated. Read more at https://frenchmoments.eu/nantes-pays-de-la-loire/ .
     </p>
 
 </div>
+
+
+<h2>Comments ({{ comments|length }})</h2>
+
+
+<ul>
+    {% for comment in comments %}
+        <li>{{ comment }}</li>
+    {% endfor %}
+
+</ul>
+
+{% endblock %}
