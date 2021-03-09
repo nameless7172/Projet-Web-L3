@@ -21,19 +21,59 @@ class ArticleController extends AbstractController
 
 
     /**
-     * @Route ("/news/{slug}")
+     * @Route ("/page1")
      */
-    public function show($slug)
+    public function show1()
     {
-
+        $pagename = 'page1';
         $comments=[
-            'lina is the worst support',
-            'AM is the best hero',
-            'ninos saiti ketdeba',
+            'Theo nous carry en BDD',
+            'random comment',
+            'BOnjour2',
         ];
         return $this->render('article/show.html.twig',[
-            'title'=> ucwords(str_ireplace('-', ' ', $slug)),
+            'title'=> $pagename,
             'comments' => $comments,
+            ]
+        );
+    }
+
+
+
+    /**
+     * @Route ("/page2")
+     */
+    public function show2()
+    {
+        $pagename = 'page2';
+        $comments=[
+            'Template pour DZIDZI2',
+            'fais ton CSS stp',
+            'BOnjour2',
+        ];
+        return $this->render('article/show.html.twig',[
+                'title'=> $pagename,
+                'comments' => $comments,
+            ]
+        );
+    }
+
+
+
+    /**
+     * @Route ("/page3")
+     */
+    public function show3()
+    {
+        $pagename = 'page3';
+        $comments=[
+            'je ferai master info',
+            'bonjour1',
+            'BOnjour2',
+        ];
+        return $this->render('article/show.html.twig',[
+                'title'=> $pagename,
+                'comments' => $comments,
             ]
         );
     }
