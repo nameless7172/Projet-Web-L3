@@ -51,7 +51,7 @@ class ArticleController extends AbstractController
             'fais ton CSS stp',
             'BOnjour2',
         ];
-        return $this->render('article/show.html.twig',[
+        return $this->render('article/show2.html.twig',[
                 'title'=> $pagename,
                 'comments' => $comments,
             ]
@@ -71,7 +71,7 @@ class ArticleController extends AbstractController
             'bonjour1',
             'BOnjour2',
         ];
-        return $this->render('article/show.html.twig',[
+        return $this->render('article/show3.html.twig',[
                 'title'=> $pagename,
                 'comments' => $comments,
             ]

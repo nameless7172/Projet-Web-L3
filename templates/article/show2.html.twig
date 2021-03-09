@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Nantes, city in France {% endblock %}
+
+{% block body %}
+
+    <h1>{{ title }}</h1>
+
+    <div>
+        <p>
+            Contenu
+        </p>
+
+    </div>
+
+    <ul>
+        {% for comment in comments %}
+            <li>{{ comment }}</li>
+        {% endfor %}
+
+    </ul>
+
+{% endblock %}
