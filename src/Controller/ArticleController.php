@@ -16,7 +16,7 @@ class ArticleController extends AbstractController
      */
     public function homepage()
     {
-        return new Response('OMG wooho!');
+        return new Response('La page "home" pour notre projet Dev Web');
     }
 
 
