@@ -16,16 +16,20 @@ class ArticleController extends AbstractController
      */
     public function homepage()
     {
-        return new Response('La page "home" pour notre projet Dev Web');
+        $pagename = 'Tournois DMT';
+        return $this->render('article/homepage.html.twig',[
+            'title'=> $pagename,
+        ]
+    );
     }
 
 
     /**
-     * @Route ("/page1")
+     * @Route ("/tournois")
      */
     public function show1()
     {
-        $pagename = 'page1';
+        $pagename = 'Tournois';
         $comments=[
             'Theo nous carry en BDD',
             'random comment',
@@ -41,11 +45,11 @@ class ArticleController extends AbstractController
 
 
     /**
-     * @Route ("/page2")
+     * @Route ("/contact")
      */
     public function show2()
     {
-        $pagename = 'page2';
+        $pagename = 'Contact';
         $comments=[
             'Template pour DZIDZI2',
             'fais ton CSS stp',
@@ -61,11 +65,11 @@ class ArticleController extends AbstractController
 
 
     /**
-     * @Route ("/page3")
+     * @Route ("/admin")
      */
     public function show3()
     {
-        $pagename = 'page3';
+        $pagename = 'Admin';
         $comments=[
             'je ferai master info',
             'bonjour1',

@@ -6,13 +6,26 @@
 
     <h1>{{ title }}</h1>
 
-    <div>
-       contenu
-
-    </div>
-
 
     <h2>Comments ({{ comments|length }})</h2>
+
+
+    <form action="/action_page.php">
+        <label for="tname">Nom tournoi:</label>
+        <input type="text" id="tname" name="tname"><br><br>
+
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+
+        <label for="debut">Date debut:</label>
+        <input type="date" id="debut" name="debut"><br><br>
+
+        <label for="fin">Date fin:</label>
+        <input type="date" id="fin" name="fin"><br><br>
+
+
+        <input type="submit" value="Submit">
+    </form>
 
 
     <ul>
