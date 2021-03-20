@@ -82,4 +82,20 @@ class ArticleController extends AbstractController
         );
     }
 
+
+    /**
+     * @Route ("/account")
+     */
+
+    public function show4()
+    {
+        $pagename = 'Compte';
+
+        return $this->render('article/account.html.twig',[
+                'title'=> $pagename,
+
+            ]
+        );
+    }
+
 }

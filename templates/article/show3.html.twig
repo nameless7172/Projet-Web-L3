@@ -7,9 +7,6 @@
     <h1>{{ title }}</h1>
 
 
-    <h2>Comments ({{ comments|length }})</h2>
-
-
     <form action="/action_page.php">
         <label for="tname">Nom tournoi:</label>
         <input type="text" id="tname" name="tname"><br><br>
@@ -26,7 +23,6 @@
 
         <input type="submit" value="Submit">
     </form>
-
 
     <ul>
         {% for comment in comments %}
